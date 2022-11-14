@@ -2,7 +2,7 @@
 
 Its only an attempt.
 
-# Before you can run it
+## Before you can run it
 
 You need to have installed **Git**, **Docker** and **Docker Compose**:
 - Git: https://git-scm.com/book/en/v2/Getting-Started-Installing-Git
@@ -15,23 +15,26 @@ You need to have installed **Git**, **Docker** and **Docker Compose**:
 
 Now you can **clone** this repository.
 
-# How to run it
+## How to run it
 
 Using a console, in the root of your local copy of the repository run:
-```
+```bash
 docker compose up -d 
 ```
 You can visit http://localhost:8080/ to check that it's working.
 
-# How to stop it
+## How to stop it
 
 Using a console, in the root of your local copy of the repository run:
-```
+```bash
 docker compose stop
 ```
 
-# Next steps
+## Next steps
 
 This base comes with an self-contained documentation repository (mkdocs), where you can check the documentation.
 
 Simply visit http://localhost:8000/ to see all the documentation.
+
+> ### Disclaimer
+> Ports may vary. Please check it with: `docker compose ps`

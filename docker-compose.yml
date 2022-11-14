@@ -4,9 +4,7 @@ name: vanilla_php_base
 services:
   nginx:
     image: nginx:alpine
-    environment:
-      - COMPOSE_PROJECT_NAME
-    container_name: nginx-${COMPOSE_PROJECT_NAME}
+    container_name: ${COMPOSE_PROJECT_NAME}-nginx
     ports:
       - "8080:80"
     volumes:
@@ -18,20 +16,16 @@ services:
       - php
   php:
     image: php:8-fpm-alpine
-    environment:
-      - COMPOSE_PROJECT_NAME
-    container_name: php-${COMPOSE_PROJECT_NAME}
+    container_name: ${COMPOSE_PROJECT_NAME}-php
     volumes:
       - type: bind
         source: ./src
         target: /var/www/html
   mkdocs:
     image: squidfunk/mkdocs-material:latest
-    environment:
-      - COMPOSE_PROJECT_NAME
-    container_name: mkdocs-${COMPOSE_PROJECT_NAME}
+    container_name: ${COMPOSE_PROJECT_NAME}-mkdocs
     ports:
-      - 8000:8000
+      - 8000-8010:8000
     volumes:
       - type: bind
         source: .
