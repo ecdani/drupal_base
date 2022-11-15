@@ -3,7 +3,7 @@ dev_addr: '127.0.0.1:8000'
 site_url: https://github.com/ecdani/vanilla_php_base
 site_dir: docs/build
 
-repo_name: phaser_base
+repo_name: vanilla_php_base
 repo_url: https://github.com/ecdani/vanilla_php_base
 
 theme:
@@ -30,7 +30,7 @@ theme:
         name: Switch to light mode
 nav:
   - Home: index.md
-
+  - "About MariaDB": mariadb.md
 markdown_extensions:
   - admonition
   - toc:
