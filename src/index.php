@@ -18,6 +18,8 @@
     echo "Connection to mariadb failed: " . $e->getMessage();
     }
  ?> 
- <?php phpinfo(); ?>
+ <?php phpinfo();
+   xdebug_info();
+ ?>
  </body>
 </html>
