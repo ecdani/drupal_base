@@ -1,6 +1,6 @@
 # Base for a php webpage
 
-Its only an attempt.
+Basic environment based on docker to run simple php pages, or to be used as a starter for more ambitious projects.
 
 ## Before you can run it
 
@@ -30,11 +30,22 @@ Using a console, in the root of your local copy of the repository run:
 docker compose stop
 ```
 
+## How to use it as starter for another project
+
+Using a console, in the folder where you want to have the new project:
+```bash
+git clone https://github.com/ecdani/vanilla_php_base.git new_project_name -o boilerplate
+cd new_project_name
+git remote add origin new_repository_url
+```
+
 ## Next steps
 
 This base comes with an self-contained documentation repository (mkdocs), where you can check the documentation.
 
 Simply visit http://localhost:8000/ to see all the documentation.
+
+Or check it directly in [/docs](/docs/index.md).
 
 > ### Disclaimer
 > Ports may vary. Please check it with: `docker compose ps`
